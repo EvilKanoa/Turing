@@ -2,7 +2,9 @@
 % Author: Kanoa Haley                              %
 % Date: 04/09/2013                                 %
 % Filename: ex1_2_name_tablet.t                    %
-% Description: Programmed for ICS3U                %
+% Description: Display a table of first names,     %
+%              last names, and home form. Using    %
+%              only put statements.                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 put "Last Name":16, "First Name":16, "Home Form":16

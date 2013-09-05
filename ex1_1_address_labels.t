@@ -2,7 +2,8 @@
 % Author: Kanoa Haley                              %
 % Date: 04/09/2013                                 %
 % Filename: ex1_1_address_labels.t                 %
-% Description: Programmed for ICS3U                %
+% Description: Prints out name, address, city and  %
+%              province, and postaal code.         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Output John Smith's address
