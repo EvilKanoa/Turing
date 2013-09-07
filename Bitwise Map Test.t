@@ -41,12 +41,35 @@ function MapToString(map : int, mapSize : int) : string
     result str
 end MapToString
 
+procedure DrawMap(trueColor : int, falseColor : int, x : int, y : int, cellSize : int, map : int, mapSize : int)
+    var row : int
+    var col : int := mapSize
+    loop
+        exit when col < 1
+        row := 0
+        loop
+            exit when not row < mapSize
+            if CheckSpot(row, mapSize - col, map, mapSize) then
+               Draw.FillBox(x + (row * cellSize), y + (col * cellSize), x + (row * cellSize) + cellSize, y + (col * cellSize) + cellSize, trueColor)
+            else
+               Draw.FillBox(x + (row * cellSize), y + (col * cellSize), x + (row * cellSize) + cellSize, y + (col * cellSize) + cellSize, falseColor)
+            end if
+            row := row + 1
+        end loop
+        col := col - 1
+    end loop
+end DrawMap
+
+View.Set("graphics:500;500,offscreenonly")
+Draw.Cls()
+
 var map : int := 0
 var mapSize : int := 5
 
-map := SetSpot(true, 2, 3, map, mapSize)
-map := SetSpot(true, 4, 1, map, mapSize)
 map := SetSpot(true, 0, 0, map, mapSize)
-map := SetSpot(true, 3, 1, map, mapSize)
+map := SetSpot(true, 1, 0, map, mapSize)
+map := SetSpot(true, 0, 1, map, mapSize)
 
 put MapToString(map, mapSize)
+put map
+DrawMap(1, 2, 100, 100, 20, map, mapSize)
