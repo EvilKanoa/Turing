@@ -1,5 +1,5 @@
 class Person
-    export setPerson, getName, getAge, printAll, name
+    export setPerson, getName, getAge, printAll
 
     var name : string
     var age : int
@@ -21,6 +21,24 @@ class Person
 	put getName(), " is ", getAge(), " years old."
     end printAll
 end Person
+
+class Entity
+    export setPos2, setPos3
+    
+    var posX, posY, posZ : int
+    
+    procedure setPos3(x : int, y : int, z : int)
+        posX := x
+        posY := y
+        posZ := z
+    end setPos3
+    
+    procedure setPos2(x : int, y : int)
+        posX := x
+        posY := y
+    end setPos2
+    
+end Entity
 
 var Kanoa : ^Person
 new Kanoa
