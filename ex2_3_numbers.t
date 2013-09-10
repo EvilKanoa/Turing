@@ -12,6 +12,7 @@
 var number_1, number_2, number_3, number_4 : int
 
 % Main Program %
+% Get the four numbers from the user
 put "Please enter number 1: " ..
 get number_1
 put "Please enter number 2: " ..
@@ -21,4 +22,5 @@ get number_3
 put "Please enter number 4: " ..
 get number_4
 
-put "\n"
+% Tell the user the numbers
+put "\n", number_1, ", ", number_2, ", ", number_3, ", ", number_4, "."
